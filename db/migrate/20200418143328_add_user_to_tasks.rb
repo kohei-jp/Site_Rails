@@ -1,6 +1,6 @@
 class AddUserToTasks < ActiveRecord::Migration[5.2]
   def up
-    excute 'DELETE FROM tasks;'
+    execute 'DELETE FROM tasks;'
     add_reference :tasks, :user, null: false, index: true
   end
 
